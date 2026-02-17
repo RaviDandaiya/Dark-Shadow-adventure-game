@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Shadow - Osura Inspired</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="game" style="color: white; font-family: sans-serif; padding: 20px;">LOADING PHASER... (If you see this, the
+    engine hasn't started yet)</div>
+  <div id="error-display"
+    style="position: absolute; top:0; left:0; color: lime; background: rgba(0,0,0,0.8); z-index: 10000; font-family: monospace; pointer-events: none;">
+  </div>
+  <script>
+    window.onerror = function (msg, url, line) {
+      document.getElementById('error-display').innerHTML += 'ERROR: ' + msg + ' at ' + url + ':' + line + '<br>';
+    };
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
